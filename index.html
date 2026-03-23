@@ -1,0 +1,65 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bingo Game</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+/* Screens */
+.screen {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active {
+  display: flex;
+}
+
+/* Button */
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Spinner */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #444;
+  border-top: 6px solid #00ffcc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Game board */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 10px;
+}
+
+.cell {
+  background: #222;
+  padding: 15px;
+  border-radius: 5px;
+}
+</style>
+
+</head>
+<body>
